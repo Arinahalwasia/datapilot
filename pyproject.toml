@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "datapilot"
+version = "0.1.0"
+description = "MCP-powered AI Data Analyst"
+requires-python = ">=3.10"
+
+dependencies = [
+    "mcp>=2,<3",
+    "sqlalchemy",
+    "psycopg2-binary",
+    "python-dotenv",
+    "pydantic",
+    "langgraph",
+    "langchain-openai",
+]
+
+[tool.setuptools.packages.find]
+include = [
+    "mcp_server*",
+    "mcp_client*",
+    "core*",
+    "agent*",
+]
